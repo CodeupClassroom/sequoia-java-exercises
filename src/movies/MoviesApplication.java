@@ -1,5 +1,6 @@
 package movies;
 
+
 import util.Input;
 
 public class MoviesApplication {
@@ -47,7 +48,7 @@ public class MoviesApplication {
         Movie[] allMovies = MoviesArray.findAll();
 
         for(Movie movie : allMovies) {
-            if(movie.getCategory().equals(category)) {
+            if(movie.getCategory().equalsIgnoreCase(category)) {
                 System.out.println(movie.getName() + " -- " + movie.getCategory());
             }
         }
@@ -60,3 +61,4 @@ public class MoviesApplication {
         }
     }
 }
+
