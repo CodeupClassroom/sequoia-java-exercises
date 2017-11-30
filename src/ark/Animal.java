@@ -1,7 +1,7 @@
 package ark;
 
 public class Animal {
-    private String kingdom = "animal";
+    public String kingdom = "animal";
     protected String name;
     protected String sound;
     protected static int totalNumberOfAnimals;

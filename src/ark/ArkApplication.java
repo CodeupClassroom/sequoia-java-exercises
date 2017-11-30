@@ -7,7 +7,6 @@ import util.Input;
  */
 public class ArkApplication {
     public static void main(String[] args) {
-        Boolean;
         System.out.println("Welcome to the Ark!");
 
         Animal[] animals = new Animal[12];
@@ -25,10 +24,13 @@ public class ArkApplication {
 
     public static void showAllAnimals(Animal[] animals) {
         for(Animal animal : animals) {
+
             animal.soundOff();
         }
 
         System.out.println("In total, we have " + Animal.getTotalNumberOfAnimals());
+
+        System.out.println(animals[0].getName() + " and " + animals[0].getNumberOfThisAnimal());
     }
 
 
