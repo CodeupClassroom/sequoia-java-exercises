@@ -1,6 +1,6 @@
 package shapes;
 
-public class Square extends Quadralateral implements Measurable {
+public class Square extends Quadrilateral implements Measurable {
     protected double side;
 
     public Square(double side) {

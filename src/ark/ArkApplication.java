@@ -2,6 +2,9 @@ package ark;
 
 import util.Input;
 
+import java.util.ArrayList;
+
+
 /**
  * NOTE: This ark does not ensure that there are only two animal of each type.
  */
@@ -9,20 +12,26 @@ public class ArkApplication {
     public static void main(String[] args) {
         System.out.println("Welcome to the Ark!");
 
-        Animal[] animals = new Animal[12];
+        // plain ol' Java array
+        // Animal[] animals = new Animal[12];
+        ArrayList<Animal> animals = new ArrayList<>();
 
         // get 11 random animals.
-        for(int i = 0; i < 11; i++) {
-            animals[i] = getRandomAnimal();
+        for(int i = 0; i < 4000; i++) {
+            animals.add(getRandomAnimal());
         }
 
         // now for the 12th animal, the user gets to decide!
-        animals[11] = getAnimalFromUser();
+        animals.add(getAnimalFromUser());
+        animals.add(getAnimalFromUser());
+        animals.add(getAnimalFromUser());
+        animals.add(getAnimalFromUser());
+        animals.add(getAnimalFromUser());
 
         showAllAnimals(animals);
     }
 
-    public static void showAllAnimals(Animal[] animals) {
+    public static void showAllAnimals(ArrayList<Animal> animals) {
         for(Animal animal : animals) {
 
             animal.soundOff();
@@ -30,7 +39,7 @@ public class ArkApplication {
 
         System.out.println("In total, we have " + Animal.getTotalNumberOfAnimals());
 
-        System.out.println(animals[0].getName() + " and " + animals[0].getNumberOfThisAnimal());
+        System.out.println(animals.get(0).getName() + " and " + animals.get(0).getNumberOfThisAnimal());
     }
 
 
