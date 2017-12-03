@@ -6,16 +6,16 @@ public class Input {
     private Scanner scan;
 
     public Input() {
-        this.scan = new Scanner(System.in);
+        this.scan = new Scanner(System.in).useDelimiter("\n");
     }
 
     public String getString() {
-        return this.scan.nextLine();
+        return this.scan.next();
     }
 
     public String getString(String prompt) {
         System.out.println(prompt);
-        return this.scan.nextLine();
+        return this.scan.next();
     }
 
 

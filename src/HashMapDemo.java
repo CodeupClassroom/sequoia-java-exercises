@@ -21,7 +21,6 @@ public class HashMapDemo {
 
         instructors.get("RedwoodAfternoon");
 
-
         HashMap<String, Person> cityLeadership = new HashMap<>();
 
         cityLeadership.put("Mayor", new Person("Ron"));
@@ -29,13 +28,11 @@ public class HashMapDemo {
         cityLeadership.put("City Councilperson for District 9", new Person("Beto"));
 
         // after elections
-        cityLeadership.put("Mayor", new Person("Bob"));
+        cityLeadership.replace("Mayor", new Person("Bob"));
         cityLeadership.put("City Councilperson for District 9", new Person("Jane"));
 
         System.out.println("Who's the mayor this year?");
         System.out.println(cityLeadership.get("Mayor"));
-
-
 
     }
 }
