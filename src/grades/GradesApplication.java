@@ -17,7 +17,7 @@ public class GradesApplication {
         }
 
         System.out.println();
-        System.out.println("-------");
+        System.out.println("-------------------");
 
         do {
 

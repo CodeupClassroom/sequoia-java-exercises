@@ -25,6 +25,7 @@ public class Student {
         grades.add(grade);
     }
 
+
     public double getGradeAverage() {
         int numberOfGrades = grades.size();
         double sumOfAllGrades = 0;
