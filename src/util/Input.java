@@ -63,12 +63,19 @@ public class Input {
     }
 
     public int getInt() {
-        return this.scan.nextInt();
+        String userInput = this.scan.next();
+        try {
+            return Integer.valueOf(userInput);
+        } catch (NumberFormatException e) {
+            System.out.println("Your input must be a number");
+            System.out.println(e.getMessage());
+            return getInt();
+        }
     }
 
     public int getInt(String prompt) {
         System.out.println(prompt);
-        return this.scan.nextInt();
+        return getInt();
     }
 
     public double getDouble(double min, double max) {
@@ -96,11 +103,18 @@ public class Input {
     }
 
     public double getDouble() {
-        return this.scan.nextDouble();
+        String userInput = scan.next();
+
+        try {
+            return Double.valueOf(userInput);
+        } catch(NumberFormatException e) {
+            System.out.println("Your input must be a double");
+            return getDouble();
+        }
     }
 
     public double getDouble(String prompt) {
         System.out.println(prompt);
-        return this.scan.nextDouble();
+        return getDouble();
     }
 }
